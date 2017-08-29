@@ -5,7 +5,8 @@
   "scripts": {
     "prebuild": "npm run clean",
     "build": "gulp",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "appveyor": "gulp appveyor"
   },
   "repository": {
     "type": "git",
