@@ -1,0 +1,15 @@
+environment:
+  nodejs_version: "6"
+
+cache:
+  - node_modules
+
+install:
+  - ps: Install-Product node $env:nodejs_version
+  - npm install
+
+build_script:
+  - npm run appveyor
+
+artifacts:
+  - path: 'dist\*.zip'
