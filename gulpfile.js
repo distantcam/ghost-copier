@@ -37,6 +37,5 @@ gulp.task('set-appveyor-version', (cb) =>
         if (err) return cb(err);
         cb();
     });
-    return cb();
 });
 
