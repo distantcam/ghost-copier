@@ -33,7 +33,7 @@ gulp.task('zip-mod', ['build-info', 'copy-src-files'], () =>
 
 gulp.task('set-appveyor-version', (cb) =>
 {
-    exec('appveyor UpdateBuild -Version "' + p.version + '+build$APPVEYOR_BUILD_NUMBER"', (err) => {
+    exec('appveyor UpdateBuild -Version "' + p.version + '+build%APPVEYOR_BUILD_NUMBER%"', (err) => {
         if (err) return cb(err);
         cb();
     });
