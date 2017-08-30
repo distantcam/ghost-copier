@@ -3,9 +3,9 @@
   "version": "1.1.0",
   "description": "Copies recipies and inventory limits from ghosted assemblers and chests to placed items.",
   "scripts": {
+    "clean": "rimraf dist",
     "prebuild": "npm run clean",
     "build": "gulp",
-    "clean": "rimraf dist",
     "appveyor": "gulp appveyor"
   },
   "repository": {
@@ -17,11 +17,10 @@
   "bugs": {
     "url": "https://github.com/distantcam/ghost-copier/issues"
   },
-  "homepage": "https://github.com/distantcam/ghost-copier#readme",
+  "homepage": "https://github.com/distantcam/ghost-copier",
   "devDependencies": {
     "gulp": "^3.9.1",
-    "gulp-mustache": "^3.0.0",
-    "gulp-rename": "^1.2.2",
+    "gulp-template": "^4.0.0",
     "gulp-zip": "^4.0.0",
     "rimraf": "^2.6.1"
   }
