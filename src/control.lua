@@ -7,7 +7,7 @@ script.on_event({defines.events.on_built_entity},
 
         if recipe then
             if placed.type == "assembling-machine" then
-                placed.recipe = recipe
+                placed.set_recipe(recipe)
             end
             recipe = nil 
         end
@@ -30,8 +30,8 @@ script.on_event({defines.events.on_put_item},
         local ghost = surface.find_entity("entity-ghost", e.position)
 
         if ghost then
-            if ghost.ghost_type == "assembling-machine" and ghost.recipe then
-                recipe = ghost.recipe
+            if ghost.ghost_type == "assembling-machine" and ghost.get_recipe() then
+                recipe = ghost.get_recipe()
             end
 
             if ghost.ghost_type == "container" then
